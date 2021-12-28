@@ -1,3 +1,4 @@
+This is our Amira frontend prototype by Chelsea Heredia and Shreeya Patel.
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
