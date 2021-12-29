@@ -36,3 +36,31 @@
     transform: rotate(360deg);
   }
 }
+
+.nav-bar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: white;
+  padding: 30px 25px;
+  color: rgb(43, 160, 255);
+  font-family: 'GlacialIndifferenceRegular';
+  font-weight: normal;
+  font-style: normal;
+}
+
+.nav-review {
+  margin: 0;
+  margin-left: auto;
+}
+
+.nav-report {
+  margin: 0;
+  margin-left: 2%;
+  margin-right: 0.75%;
+  color: rgb(113, 228, 128);
+}
+
+body {
+  margin: 0 !important;
+}
