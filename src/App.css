@@ -3,17 +3,20 @@
 }
 
 .App-logo {
+  margin: 0;
   height: 40vmin;
   pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
+    margin: 0;
     animation: App-logo-spin infinite 20s linear;
   }
 }
 
 .App-header {
+  margin: 0;
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -38,9 +41,11 @@
 }
 
 .nav-bar {
+  border-bottom: 30px rgb(43, 160, 255);
+  margin: 0;
   display: flex;
   align-items: center;
-  width: 100%;
+  width: 96%;
   background-color: white;
   padding: 30px 25px;
   color: rgb(43, 160, 255);
@@ -50,12 +55,14 @@
 }
 
 .nav-review {
+  padding-top: 0px;
   margin: 0;
   margin-left: auto;
 }
 
 .nav-report {
   margin: 0;
+  padding-top: 0px;
   margin-left: 2%;
   margin-right: 0.75%;
   color: rgb(113, 228, 128);
@@ -63,4 +70,13 @@
 
 body {
   margin: 0 !important;
+  height: 100vh;
+
 }
+
+.nav-logo {
+  margin: 0 !important;
+  padding: 0%;
+  padding-bottom: 0%;
+}
+
