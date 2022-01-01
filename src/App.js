@@ -1,13 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
 import NavBar from './NavBar.js';
+import RunningRecord from './RunningRecord';
 
 function App() {
   return (
     <div className="App" margin="0">
       <header className="App-header" margin="0">
         <NavBar />
-        <img src={logo} className="App-logo" alt="logo" margin="0" />
+        <RunningRecord />
+        <img src={logo} className="App-logo" alt="logo"/>
         <p margin="0px">
           Edit <code>src/App.js</code> and save to reload.
         </p>
