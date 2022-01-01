@@ -9,7 +9,7 @@ function App() {
       <header className="App-header" margin="0">
         <NavBar />
         <RunningRecord />
-        <img src={logo} className="App-logo" alt="logo"/>
+        {/*<img src={logo} className="App-logo" alt="logo"/>
         <p margin="0px">
           Edit <code>src/App.js</code> and save to reload.
         </p>
@@ -21,7 +21,7 @@ function App() {
           margin ="0"
         >
           Learn React
-  </a> 
+        </a> */}
       </header>
     </div>
   );
