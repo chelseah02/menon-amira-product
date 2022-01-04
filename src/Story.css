@@ -1,0 +1,148 @@
+#story {
+    height: 100vh;
+}
+
+.story {
+    font-family: 'GlacialIndifferenceRegular';
+    font-weight: normal;
+    font-style: normal;
+}
+
+.record-button, .save-button, .story-button, .student-btn {
+    background-color: #ddd;
+    margin-bottom: 5%;
+    border: none;
+    color: black;
+    padding: 5px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 16px;
+    font-family: 'GlacialIndifferenceRegular';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 20px;
+    color: white;
+}
+
+.save-button {
+    color: white;
+    margin-left: 10%;
+    margin-bottom: 1.5%;
+}
+
+.record-button {
+    background-color: #ddd;
+    margin-left: 1%;
+}
+
+.student-btn {
+    background-color: #62E49D;
+    margin-left: 40%;
+}
+
+.story-button {
+    background-color: #62E49D;
+    margin-left: 3%;
+}
+
+.record-button:hover {
+    background-color: #62E49D;
+}
+
+.btn {
+    border-bottom: 1px solid black;
+}
+
+.text {
+    color: #5DC458;
+    text-align: left;
+    font-size: 35px;
+    margin-left: 21%;
+    margin-right: 5%;
+    width: 60%;
+    padding: 15px 20px; 
+     
+}
+
+.student-profile {
+    position: absolute;
+    width: 20%;
+    height: 65%;
+    left: 0px;
+    top: 225px;
+
+    background: #62E49D;
+    border-radius: 0px 40px 40px 0px;
+    color: white;
+    font-family: 'GlacialIndifferenceRegular';
+}
+.profile-title {
+    text-align: center;
+    text-decoration: none;
+    font-weight: normal;
+    margin-bottom: 0%;
+}
+
+.student-name {
+    margin-left: 5%;
+    text-align: left;
+    margin-bottom: 0%;
+    margin-top: 2%;
+}
+
+.accuracy-text {
+    text-align: left;
+    font-weight: normal;
+    margin-left: 5%;
+    margin-bottom: 0%;
+    margin-top: 1.5%;
+}
+
+.grade-text {
+    margin-left: 5%;
+    margin-top: 0%;
+}
+
+/* legend bg */
+
+.legend-story {
+    position: absolute;
+    width: 70%;
+    height: 40%;
+    left: 5%;
+    top: 52%;
+
+    background: #64D1AE;
+    border-radius: 35px;
+    font-style: 10px;
+    display: table;
+}
+.legend-title {
+    text-align: center;
+    margin-right: 2%;
+    margin: 5%;
+}
+.legend-story-item {
+    font-weight: normal;
+    font-size: 15px;
+    margin-left: 0%;
+    vertical-align: middle;
+    display: table-cell;
+}
+.scroll-bar {
+    position: absolute;
+    width: 10px;
+    height: 200px;
+    left: 91%;
+    top: 40%;
+
+    background: #A2A2A2;
+    border-radius: 60px;
+}
+
+figure {
+    margin-left: 250px;
+}
