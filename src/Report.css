@@ -1,0 +1,80 @@
+.report-title {
+    font-family: 'GlacialIndifferenceRegular';
+    font-weight: normal;
+    font-style: normal;
+    color: black;
+    border-bottom: 1px solid black;
+    width: 96%;
+}
+
+.report-student {
+    font-size: 40px;
+    text-align: left;
+    padding-left: 0px;
+    padding-top: 15px;
+    padding-bottom: 0px;
+}
+
+    /* basic positioning */
+    .legend { 
+        list-style: none;
+        font-size: 20px;
+    }
+    .legend li { 
+        float: left; 
+        margin-right: 10px; 
+    }
+    .legend span { 
+        border: 1px solid #ccc;
+        float: left;
+        width: 12px;
+        height: 12px;
+        margin: 2px;
+    }
+
+    /* Legend colors */
+    .legend .incorrect-legend { 
+        background-color: #7f74e6;
+        margin-top: 7px;
+        margin-right: 5px;
+        border-radius: 16px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+    .legend .correct-legend {
+        background-color: hsl(117, 48%, 56%);
+        border-radius: 16px;
+        margin-top: 7px;
+        margin-right: 5px;
+        margin-left: 40px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+     }
+    .legend .flagged-legend { 
+        background-color: #FCDA89;
+        border-radius: 16px;
+        margin-top: 7px;
+        margin-right: 5px;
+        margin-left: 40px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+     }
+    .legend .low-error-legend { 
+        background-color: #3EA8DF;
+        border-radius: 16px;
+        margin-top: 7px;
+        margin-right: 5px;
+        margin-left: 40px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+     }
+    .legend .unread-legend { 
+        background-color: #AFAFAF;
+        border-radius: 16px;
+        margin-top: 7px;
+        margin-right: 5px;
+        margin-left: 40px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+     }
+
+    figure {
+        margin: 0px;
+        width: 2000px;
+    }
+
