@@ -29,7 +29,7 @@
     font-weight: normal;
 }
 
-.record-button, .save-button {
+.record-button, .save-button, .story-button {
     background-color: #ddd;
     border: none;
     color: black;
@@ -55,6 +55,14 @@
 .record-button {
     background-color: #62E49D;
     margin-right: 400px;
+}
+
+.story-button {
+    background-color: #ddd;
+}
+
+.story-button:hover {
+    background-color: #62E49D;
 }
 
 table {
@@ -161,6 +169,6 @@ table {
 
     figure {
         margin: 0px;
-        width: 2000px;
+        width: 80%;
     }
 

@@ -1,5 +1,7 @@
 import React from 'react';
 import './RunningRecord.css';
+import {Link} from "react-router-dom";
+import Story from './Story.js';
 
 export default function RunningRecord() {
     return(
@@ -7,6 +9,7 @@ export default function RunningRecord() {
             <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/glacial-indifference" type="text/css"/>
             {/* Record and Save Buttons */}
             <div className='button'>
+                <button href="./Story.js" className='story-button'>Story</button>
                 <button className='record-button'>Record</button>
                 <button className='save-button'>Save</button>
             </div>
@@ -63,15 +66,15 @@ export default function RunningRecord() {
                 </tr>
             </table>
 
-        {/* Audio Bar */}
-        <figure>
-            <audio
-                controls
-                src="/media/cc0-audio/t-rex-roar.mp3">
-                    Your browser does not support the
-                    <code>audio</code> element.
-            </audio>
-        </figure>
+            {/* Audio Bar */}
+            <figure>
+                <audio
+                    controls
+                    src="/media/cc0-audio/t-rex-roar.mp3">
+                        Your browser does not support the
+                        <code>audio</code> element.
+                </audio>
+            </figure>
         </>
     )
 }

@@ -68,6 +68,10 @@
   color: #62E49D;
 }
 
+.nav-report:hover {
+  color: rgb(43, 160, 255);
+}
+
 body {
   margin: 0 !important;
   height: 100vh;

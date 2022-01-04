@@ -2,6 +2,7 @@ import { react } from "@babel/types";
 import React from 'react';
 import ReactDOM from 'react-dom';
 import amiralogo from './images/amira-logo.PNG';
+import {Link} from 'react-router-dom';
 
 function NavBar() {
     return (

@@ -2,6 +2,7 @@ import './App.css';
 import NavBar from './NavBar.js';
 import RunningRecord from './RunningRecord';
 import './Story.css';
+import {Link} from 'react-router-dom';
 
 function Story() {
     return(
@@ -9,10 +10,10 @@ function Story() {
         <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/glacial-indifference" type="text/css"/>
         <NavBar />
         <div className='btn'>
-            <button className='story-button'> Story </button>
-            <button className='record-button'> Record </button>
+            <button className='story-btn'> Story </button>
+            <button className='record-btn'> Record </button>
             <button className='student-btn'> Dorothy Hammond </button>
-            <button className='save-button'> Save </button>
+            <button className='save-btn'> Save </button>
         </div>
         <rect className='student-profile'>
             <h2 className='profile-title'> Student Profile </h2>

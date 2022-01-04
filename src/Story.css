@@ -8,7 +8,7 @@
     font-style: normal;
 }
 
-.record-button, .save-button, .story-button, .student-btn {
+.record-btn, .save-btn, .story-btn, .student-btn {
     background-color: #ddd;
     margin-bottom: 5%;
     border: none;
@@ -27,13 +27,13 @@
     color: white;
 }
 
-.save-button {
+.save-btn {
     color: white;
     margin-left: 10%;
     margin-bottom: 1.5%;
 }
 
-.record-button {
+.record-btn {
     background-color: #ddd;
     margin-left: 1%;
 }
@@ -43,12 +43,12 @@
     margin-left: 40%;
 }
 
-.story-button {
+.story-btn {
     background-color: #62E49D;
     margin-left: 3%;
 }
 
-.record-button:hover {
+.record-btn:hover {
     background-color: #62E49D;
 }
 
