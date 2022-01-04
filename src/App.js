@@ -1,16 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
-import NavBar from './NavBar.js';
+import NavBar from './NavBar';
 import RunningRecord from './RunningRecord';
 import Story from './Story';
 import {Route, Link} from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App" margin="0">
-      <header exact className="App-header" margin="0">
+    <div className="App">
+      <header exact className="App-header">
         <NavBar />
         <RunningRecord />
+        {/*<Story />*/}
       </header>
     </div>
   );
@@ -18,7 +19,11 @@ function App() {
 
 export default App;
 
-
+{/*
+          <Route exact path="/" component={NavBar} />
+        <Route exact path="/story" component={Story} />
+        <Route exact path="/record" component={RunningRecord} />
+ */}
         {
           /* EXTRA CODE FOR REFERENCE <img src={logo} className="App-logo" alt="logo"/>
         <p margin="0px">
