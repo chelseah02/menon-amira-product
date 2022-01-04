@@ -10,8 +10,8 @@ function App() {
     <div className="App">
       <header exact className="App-header">
         <NavBar />
-        <RunningRecord />
-        {/*<Story />*/}
+        <Route exact path="/" component={Story} />
+        <Route exact path="/record" component={RunningRecord} />
       </header>
     </div>
   );

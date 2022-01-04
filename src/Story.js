@@ -8,10 +8,9 @@ function Story() {
     return(
     <div id="story">
         <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/glacial-indifference" type="text/css"/>
-        <NavBar />
         <div className='btn'>
-            <button className='story-btn'> Story </button>
-            <button className='record-btn'> Record </button>
+            <Link className='story-btn' to='/'> Story </Link>
+            <Link className='record-btn' to='/record'> Record </Link>
             <button className='student-btn'> Dorothy Hammond </button>
             <button className='save-btn'> Save </button>
         </div>

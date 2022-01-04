@@ -9,7 +9,7 @@ export default function RunningRecord() {
             <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/glacial-indifference" type="text/css"/>
             {/* Record and Save Buttons */}
             <div className='button'>
-                <button href="./Story.js" className='story-button'>Story</button>
+                <Link to="/" className='story-button'>Story</Link>
                 <button className='record-button'>Record</button>
                 <button className='save-button'>Save</button>
             </div>
