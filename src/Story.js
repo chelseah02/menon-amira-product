@@ -31,10 +31,9 @@ function Story() {
             </ul>
         </rect>
         <p className='text'>
-            My dog likes to run fast. His name is Sammy and he is funny. Sammy chases his own tail when he is happy. 
-            He also likes to play fetch and go to the park. One day we went to the park to play fetch. When we got
-            there, we decided to have a race instead. Sammy obviously won because he is faster than I am. It was
-            a fun day!
+            My dog <span className='low-error-text'>likes</span> to run fast. His name is Sammy and he is funny. Sammy <span className='incorrect-text'>chases</span> his own tail when he <span className='low-error-text'>is</span> happy. 
+            He also <span className='low-error-text'> likes to </span> play <span className='flagged-text'>fetch</span> and go to the park. One day we went to the park to play <span className='incorrect-text'>fetch</span>. When we got
+            there, we <span className='incorrect-text'>decided</span> to have a race <span className='incorrect-text'>instead</span>. Sammy <span className='incorrect-text'>obviously</span> won <span className='incorrect-text'>because</span> he is faster than I am. It <span className='unread-text'> was a </span>fun day!
         </p>
         <rect className='scroll-bar'> </rect>
         
