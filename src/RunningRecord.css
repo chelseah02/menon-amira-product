@@ -37,7 +37,7 @@
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    margin: 4px 2px;
+    margin: 4px 3px;
     cursor: pointer;
     border-radius: 16px;
     font-family: 'GlacialIndifferenceRegular';
@@ -46,7 +46,9 @@
     font-size: 20px;
     color: white;
 }
-
+.record-pg-button {
+    margin-right: 12px;
+}
 .save-button {
     color: white;
     margin-left: 400px;

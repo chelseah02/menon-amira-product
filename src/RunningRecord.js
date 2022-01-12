@@ -9,7 +9,7 @@ export default function RunningRecord() {
             <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/glacial-indifference" type="text/css"/>
             {/* Record and Save Buttons */}
             <div className='button'>
-                <Link to="/" className='story-button'>Story</Link>
+                <Link to="/" className='story-button record-pg-button'>Story</Link>
                 <button className='record-button'>Record</button>
                 <button className='save-button'>Save</button>
             </div>
@@ -70,11 +70,13 @@ export default function RunningRecord() {
             <figure>
                 <audio
                     controls
-                    src="/media/cc0-audio/t-rex-roar.mp3">
+                    src="/amira_rr_mock_data/story_audio.wav">
                         Your browser does not support the
                         <code>audio</code> element.
                 </audio>
             </figure>
+
+            
         </>
     )
 }
