@@ -3,6 +3,7 @@ import './App.css';
 import NavBar from './NavBar';
 import RunningRecord from './RunningRecord';
 import Story from './Story';
+import Report from './Report';
 import {Route, Link} from 'react-router-dom';
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
         <NavBar />
         <Route exact path="/" component={Story} />
         <Route exact path="/record" component={RunningRecord} />
+        <Route path="/report" component={Report} />
       </header>
     </div>
   );
