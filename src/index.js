@@ -9,6 +9,7 @@ import {BrowserRouter} from 'react-router-dom';
 ReactDOM.render(
   <BrowserRouter>
       <App />
+      <footer> </footer>
   </BrowserRouter>,
   document.getElementById('root')
 );

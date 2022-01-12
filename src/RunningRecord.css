@@ -90,6 +90,9 @@ table {
   table tr th:last-child {
     border-right: 0;
   }
+  table {
+    margin-bottom: 4%;
+  }
 
   .correct-text {
       color: #5DC458;
@@ -171,6 +174,7 @@ table {
 
     figure {
         margin: 0px;
-        width: 80%;
+        width: 62% !important;
+        height: 7.5% !important;
     }
 

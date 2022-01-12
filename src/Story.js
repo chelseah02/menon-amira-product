@@ -4,6 +4,7 @@ import NavBar from './NavBar.js';
 import RunningRecord from './RunningRecord';
 import './Story.css';
 import {Link} from 'react-router-dom';
+import ReactPlayer from "react-player";
 
 const Profile = () => 
     <rect className='student-profile'>
@@ -44,14 +45,15 @@ function Story() {
         <rect className='scroll-bar'> </rect>
         
         {/* Audio Bar */}
-        <figure>
-                <audio
-                    controls
-                    src="/amira_rr_mock_data/story_audio.wav">
-                        Your browser does not support the
-                        <code>audio</code> element.
-                </audio>
-        </figure>
+        <ReactPlayer 
+            url="https://ia801309.us.archive.org/5/items/eubanks_elizabeth_01/eubanks_elizabeth_01.mp3"
+            width="62%"
+            height="7.5%"
+            playing={false}
+            controls={true}
+            className="mock-story-audio"
+            style={{marginLeft: "22%"}}
+        />
     </div> 
     )
 }

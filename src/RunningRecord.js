@@ -2,6 +2,8 @@ import React from 'react';
 import './RunningRecord.css';
 import {Link} from "react-router-dom";
 import Story from './Story.js';
+import ReactPlayer from "react-player";
+
 
 export default function RunningRecord() {
     return(
@@ -41,7 +43,7 @@ export default function RunningRecord() {
                     <th> M-P </th>
                 </tr>
                 <tr>
-                    <td> 1 </td>
+                    <td><button> 1 </button></td>
                     <td> <span className="correct-text"> Sammy </span> <span className='incorrect-text'> chases  </span> <span className="correct-text"> his own tail when he </span><span className='low-error-text'> is </span> <span className="correct-text">happy.</span></td>
                     <td> 1 </td>
                     <td> 0 </td>
@@ -49,7 +51,7 @@ export default function RunningRecord() {
                     <td> 1 </td>
                 </tr>
                 <tr>
-                    <td> 2 </td>
+                    <td><button> 2 </button></td>
                     <td> <span className="correct-text">He also </span> <span className='low-error-text'> likes to </span> <span className="correct-text"> play </span><span className='flagged-text'>fetch </span>   <span className="correct-text"> and go to the park. </span> </td>
                     <td> 0 </td>
                     <td> 1 </td>
@@ -57,25 +59,34 @@ export default function RunningRecord() {
                     <td> 1 </td>
                 </tr>
                 <tr> 
-                    <td> 3 </td>
+                    <td><button> 3 </button></td>
                     <td> <span className="correct-text"> It </span> <span className= 'unread-text'> was a  </span><span className="correct-text"> fun day! </span> </td>
                     <td> 0 </td>
                     <td> 0 </td>
                     <td> 1 </td>
                     <td> 0 </td>
                 </tr>
+                <tr>
+                    <td><button> 4 </button></td>
+                    <td> This is a sentence phrase. </td>
+                    <td> 0 </td>
+                    <td> 1 </td>
+                    <td> 0 </td>
+                    <td> 1</td>
+                </tr>
             </table>
 
             {/* Audio Bar */}
-            <figure>
-                <audio
-                    controls
-                    src="/amira_rr_mock_data/story_audio.wav">
-                        Your browser does not support the
-                        <code>audio</code> element.
-                </audio>
-            </figure>
-
+            <ReactPlayer
+                id="myAudio"
+                url="https://ia801309.us.archive.org/5/items/eubanks_elizabeth_01/eubanks_elizabeth_01.mp3"
+                width="80%"
+                height="50px"
+                playing={false}
+                controls={true}
+                style={{marginBottom: "2%", marginTop: "0%"}}
+            />
+            
             
         </>
     )
