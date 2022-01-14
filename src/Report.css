@@ -70,7 +70,7 @@
     height: 170px;
     position: relative;
     left: 150px;
-    top: -660px;
+    top: -680px;
     word-wrap: break-word;
 }
 
@@ -113,17 +113,17 @@
 
 
     /* basic positioning */
-    .legend { 
+    .report-legend { 
         list-style: none;
         font-size: 20px;
     }
-    .legend li { 
+    .report-legend li { 
         float: left; 
         margin-right: 10px;
         color: #323232;
         width: 200px;
     }
-    .legend span { 
+    .report-legend span { 
         border: 1px solid #ccc;
         float: left;
         width: 12px;
@@ -132,14 +132,14 @@
     }
 
     /* Legend colors */
-    .legend .incorrect-legend { 
+    .legend .report-incorrect-legend { 
         background-color: #EE7C5B;
         margin-top: 7px;
         margin-right: 5px;
         border-radius: 16px;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
-    .legend .correct-legend {
+    .legend .report-correct-legend {
         background-color: hsl(117, 48%, 56%);
         border-radius: 16px;
         margin-top: 7px;
@@ -147,7 +147,7 @@
         margin-left: 40px;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
      }
-    .legend .flagged-legend { 
+    .legend .report-flagged-legend { 
         background-color: #FCDA89;
         border-radius: 16px;
         margin-top: 7px;
@@ -155,7 +155,7 @@
         margin-left: 40px;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
      }
-    .legend .low-error-legend { 
+    .legend .report-low-error-legend { 
         background-color: #3EA8DF;
         border-radius: 16px;
         margin-top: 7px;
@@ -163,7 +163,7 @@
         margin-left: 40px;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
      }
-    .legend .unread-legend { 
+    .legend .report-unread-legend { 
         background-color: #AFAFAF;
         border-radius: 16px;
         margin-top: 7px;

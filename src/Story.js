@@ -25,7 +25,7 @@ const Profile = () =>
 ;
 function Story() {
     const [showProfile, setProfileVisibility] = useState(false);
-    const onClick = () => setProfileVisibility(true);
+   
     return(
     <div id="story">
         <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/glacial-indifference" type="text/css"/>
@@ -35,7 +35,10 @@ function Story() {
             <button className='student-btn'> Dorothy Hammond </button>
             <button className='save-btn'> Save </button>
         </div>
-        <button className='expand-btn' onClick={onClick}> {">"}</button>
+        <button className='expand-btn' onClick={() => setProfileVisibility(true)}> {">"}</button>
+        <div>
+        <h3 className='close-btn' onClick={() => setProfileVisibility(false)}> {"<"}</h3>
+        </div>
         {showProfile ? <Profile /> : null}
         <p className='text'>
             My dog <span className='low-error-text'>likes</span> to run fast. His name is Sammy and he is funny. Sammy <span className='incorrect-text'>chases</span> his own tail when he <span className='low-error-text'>is</span> happy. 
@@ -53,7 +56,8 @@ function Story() {
             controls={true}
             className="mock-story-audio"
             style={{marginLeft: "22%"}}
-        />
+        /> 
+
     </div> 
     )
 }

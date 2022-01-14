@@ -3,8 +3,6 @@ import './RunningRecord.css';
 import {Link} from "react-router-dom";
 import Story from './Story.js';
 import ReactPlayer from "react-player";
-
-
 export default function RunningRecord() {
     return(
         <>
@@ -76,7 +74,7 @@ export default function RunningRecord() {
                 </tr>
             </table>
 
-            {/* Audio Bar */}
+            {/* Audio Bar  */}
             <ReactPlayer
                 id="myAudio"
                 url="https://ia801309.us.archive.org/5/items/eubanks_elizabeth_01/eubanks_elizabeth_01.mp3"
@@ -85,7 +83,7 @@ export default function RunningRecord() {
                 playing={false}
                 controls={true}
                 style={{marginBottom: "2%", marginTop: "0%"}}
-            />
+            /> 
             
             
         </>
