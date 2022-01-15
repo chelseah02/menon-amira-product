@@ -76,7 +76,7 @@ export default function RunningRecord() {
                 </tr>
             </table>
 
-            {/* Audio Bar */}
+            {/* Audio Bar  */}
             <ReactPlayer
                 id="myAudio"
                 url="https://ia801309.us.archive.org/5/items/eubanks_elizabeth_01/eubanks_elizabeth_01.mp3"
