@@ -71,7 +71,7 @@
 
 .student-profile {
     position: absolute;
-    width: 20%;
+    width: 21%;
     height: 69%;
     left: 0px;
     top: 225px;
@@ -141,10 +141,10 @@
 
 .legend-story {
     position: absolute;
-    width: 70%;
-    height: 40%;
-    left: 5%;
-    top: 53%;
+    width: 35%;
+    height: 23%;
+    left: 2.5%;
+    top: 53.5%;
 
     background: #64D1AE;
     border-radius: 35px;
@@ -152,16 +152,24 @@
     display: table;
 }
 .legend-title {
+    color: white !important;
     text-align: center;
     margin-right: 2%;
     margin: 5%;
 }
 .legend-story-item {
+    color: white !important;
     font-weight: normal;
     font-size: 15px;
     margin-left: 0%;
     vertical-align: middle;
     display: table-cell;
+}
+.incorrect-story {
+    margin: 0px !important;
+}
+.incorrect-story-word {
+    padding-left: 1px !important;
 }
 .scroll-bar {
     position: absolute;

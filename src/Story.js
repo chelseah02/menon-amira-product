@@ -1,6 +1,5 @@
 import React, {useState} from "react";
 import './App.css';
-import NavBar from './NavBar.js';
 import RunningRecord from './RunningRecord';
 import './Story.css';
 import {Link} from 'react-router-dom';
@@ -15,7 +14,7 @@ const Profile = () =>
     {/* Key/Legend */}
     <ul class="legend legend-story">
         <li className='legend-title'> Legend </li>
-        <li class="legend-story-item"><span class="incorrect-legend"></span> Incorrect</li>
+        <li class="legend-story-item incorrect-story-word"><span class="incorrect-legend incorrect-story"></span> Incorrect</li>
         <li class="legend-story-item"><span class="correct-legend legend-story-item"></span> Correct </li>
         <li class="legend-story-item"><span class="flagged-legend legend-story-item"></span> Flagged </li>
         <li class="legend-story-item"><span class="low-error-legend legend-story-item"></span>Low Error Word </li>
@@ -51,7 +50,6 @@ function Story() {
             height="7.5%"
             playing={false}
             controls={true}
-            className="mock-story-audio"
             style={{marginLeft: "22%"}}
         />
     </div> 

@@ -1,0 +1,47 @@
+
+body{ /*removes horizontal scroll bar*/
+    overflow-x:hidden;
+}
+.team-card {
+    width: 28%;
+    height: 50%;
+    color: rgb(20, 20, 20);
+    border: 5px ridge turquoise;
+    background-color: rgb(231, 255, 253);
+    font-family: 'GlacialIndifferenceRegular';
+    font-weight: normal;
+    font-style: normal;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    display: inline-block;
+    margin: 2px 7px;
+    cursor: pointer;
+    border-radius: 15px;
+    padding-left: 0.25%;
+    padding-right: 0.25%;
+}
+.team-title, .team-card-title, .team-card-text {
+    font-family: 'GlacialIndifferenceRegular';
+    font-weight: normal;
+    font-style: normal;
+    flex-wrap: wrap;
+}
+
+.team-card-title {
+    font-weight: bold !important;
+}
+
+.emin-card, .trang-card, .shriram-card {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.team-link {
+    text-decoration: none;
+    color:rgb(20, 20, 20);
+}
+
+.team-link:hover {
+    color: rgb(56, 167, 155);
+}

@@ -1,0 +1,38 @@
+.footer {
+    color: rgb(34, 31, 31);
+    background-color: rgb(230, 230, 230);
+    font-family: 'GlacialIndifferenceRegular';
+    font-weight: none;
+    font-style: normal;
+    opacity: 1;
+    width: 100%;
+}
+
+footer, .link:hover {
+    color: white;
+}
+.footer-title {
+    text-align: center;
+    padding-top: 2%;
+    padding-left: 2%;
+    padding-bottom: 0%;
+}
+.footer-tbl {
+    padding-top: 0%;
+}
+.footer-tbl, .footer-td, .footer-th {
+    border: none;
+    padding-left: 0%;
+    padding-right: 0%;
+}
+.footer-link {
+    color: rgb(34, 31, 31);
+    text-decoration: none;
+}
+.footer-link:hover {
+    color: white;
+}
+
+
+
+

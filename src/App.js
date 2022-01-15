@@ -4,6 +4,8 @@ import NavBar from './NavBar';
 import RunningRecord from './RunningRecord';
 import Story from './Story';
 import Report from './Report';
+import Team from './Team';
+import Footer from './Footer';
 import {Route, Link} from 'react-router-dom';
 
 function App() {
@@ -13,7 +15,10 @@ function App() {
         <NavBar />
         <Route exact path="/" component={Story} />
         <Route exact path="/record" component={RunningRecord} />
-        <Route path="/report" component={Report} />
+        <Route exact path="/report" component={Report} />
+        <Route exact path="/details" />
+        <Route exact path="/team" component={Team}/>
+        <Footer />
       </header>
     </div>
   );

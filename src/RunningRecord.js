@@ -3,7 +3,7 @@ import './RunningRecord.css';
 import {Link} from "react-router-dom";
 import Story from './Story.js';
 import ReactPlayer from "react-player";
-
+import Footer from './Footer';
 
 export default function RunningRecord() {
     return(
@@ -86,8 +86,6 @@ export default function RunningRecord() {
                 controls={true}
                 style={{marginBottom: "2%", marginTop: "0%"}}
             />
-            
-            
         </>
     )
 }
