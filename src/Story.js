@@ -53,9 +53,9 @@ function Story() {
             height="7.5%"
             playing={false}
             controls={true}
-            style={{marginLeft: "22%"}}
+            style={{marginLeft: "22%", paddingBottom: "6", marginBottom: "3%"}}
         /> 
-
+        <br></br>
     </div> 
     )
 }

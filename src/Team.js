@@ -3,6 +3,12 @@ import './App.css';
 import './Team.css'
 import Footer from './Footer';
 import {Link} from 'react-router-dom';
+import ethanPic from './images/ethan_profile.jpg';
+import chelseaPic from './images/chelsea_profile.jpg';
+import shreeyaPic from './images/shreeya_profile.jpg';
+import eminPic from './images/emin_profile.jpg';
+import shriramPic from './images/shriram_profile.jpg';
+import trangPic from './images/trang_profile.jpg';
 
  function Team() {
   
@@ -31,7 +37,7 @@ import {Link} from 'react-router-dom';
         <h1 className='team-title'> Meet the Team </h1>
         <div className="justify-content-sm-center">
             <card className='team-card ethan-card'>
-                <div>
+                <div className='card-container'>
                     <p className='team-card-title' tag="h6"> Ethan Seto, Project Manager</p>
                     <p className='team-card-text' tag="h6"> Major: Computer & Cognitive Science </p>
                     <p className='team-card-text' tag="h6"> School: University of Pennsylvania </p>
@@ -41,7 +47,7 @@ import {Link} from 'react-router-dom';
                 </div>
             </card>
             <card className='team-card chelsea-card'>
-                <div>
+                <div className='card-container'>
                     <p className='team-card-title chelsea-title' tag="h6"> Chelsea Heredia, Frontend Developer </p>
                     <p className='team-card-text major' tag="h6"> Major: Computer Science </p>
                     <p className='team-card-text' tag="h6"> School: University of Texas at Dallas </p>
@@ -51,7 +57,7 @@ import {Link} from 'react-router-dom';
                 </div>
             </card>
             <card className='team-card shreeya-card'>
-                <div>
+                <div className='card-container'>
                     <p className='team-card-title chelsea-title' tag="h6"> Shreeya Patel, Frontend Developer </p>
                     <p className='team-card-text major' tag="h6"> Major: Engineering </p>
                     <p className='team-card-text' tag="h6"> School: Columbia University </p>
@@ -61,7 +67,7 @@ import {Link} from 'react-router-dom';
                 </div>
             </card>
             <card className='team-card emin-card'>
-                <div>
+                <div className='card-container'>
                     <p className='team-card-title chelsea-title' tag="h6"> Emin Lacin, Data Scientist </p>
                     <p className='team-card-text major' tag="h6"> Major: Complex Systems Engineering </p>
                     <p className='team-card-text' tag="h6"> School: CentraleSupelec </p>
@@ -71,7 +77,7 @@ import {Link} from 'react-router-dom';
                 </div>
             </card>
             <card className='team-card shiriram-card'>
-                <div>
+                <div className='card-container'>
                     <p className='team-card-title chelsea-title' tag="h6"> Shriram Holla, Data Scientist </p>
                     <p className='team-card-text major' tag="h6"> Major: Computer Science </p>
                     <p className='team-card-text' tag="h6"> School: University of Waterloo </p>
@@ -81,7 +87,7 @@ import {Link} from 'react-router-dom';
                 </div>
             </card>
             <card className='team-card trang-card'>
-                <div>
+                <div className='card-container'>
                     <p className='team-card-title chelsea-title' tag="h6"> Trang Duong, Data Scientist </p>
                     <p className='team-card-text major' tag="h6"> Major: Data Science & Mathematics </p>
                     <p className='team-card-text' tag="h6"> School: Bawr College </p>
