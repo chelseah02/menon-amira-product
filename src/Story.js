@@ -55,7 +55,6 @@ function Story() {
             controls={true}
             style={{marginLeft: "22%"}}
         /> 
-        <h1> Text </h1>
     </div> 
     )
 }

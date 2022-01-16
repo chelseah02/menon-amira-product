@@ -19,9 +19,11 @@ import Footer from './Footer';
     } */}
 
 (function AudioJumping(f) {
-    var set = [5, 10, 15, 30];
+    'use strict';
+
+    var set = [5, 10, 15, 30]; // In seconds
     var audio = f.getElementById('myAudio');
-    var button = f.getElementsByTagName('button'); // ERROR HERE WITH GETTING BUTTONS
+    var button = f.getElementById('rr-table').getElementsByTagName('button'); // ERROR HERE WITH GETTING BUTTONS
 
     for (var time = 0; time < button.length; time++) {
         button[time].addEventListener('click', setCurTime(time), false);
@@ -63,7 +65,7 @@ function RunningRecord() {
                 <li><span class="unread-legend"></span> Not Read </li>
             </ul>
             {/* Running Record Table */}
-            <table>
+            <table id='rr-table'>
                 <tr>
                     <th> Phrase </th>
                     <th> </th>
