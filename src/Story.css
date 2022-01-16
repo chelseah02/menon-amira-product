@@ -145,6 +145,9 @@
     text-align: center;
     border-radius: 0px 16px 16px 0px;
 }
+.close-btn:hover {
+    background-color: #62E49D;
+}
 
 .grade-text {
     margin-left: 2%;
@@ -155,11 +158,10 @@
 
 .legend-story {
     position: absolute;
-    width: 35% !important;
-    height: 23%;
-    left: 2.5%;
-    top: 53.5%;
-
+    width: 70% !important;
+    height: 40%;
+    left: 5%;
+    top: 53%;
     background: #64D1AE;
     border-radius: 35px;
     font-style: 10px;

@@ -4,8 +4,39 @@ import {Link} from "react-router-dom";
 import Story from './Story.js';
 import ReactPlayer from "react-player";
 import Footer from './Footer';
+{/*var set = [5, 10, 15, 30]; // In seconds
+    var audio = f.getElementById('myAudio');
+    var button = f.getElementsById('phrase-btn').getElementsByTagName('button');
+    for (var time = 0; time < button.length; time++) {
+        button[time].addEventListener('click', setCurTime(time), false);
+    }
 
-export default function RunningRecord() {
+    function setCurTime(time) {
+        button[time].onclick = function() {
+            audio.currentTime = set[time];
+            audio.play();
+        }
+    } */}
+
+(function AudioJumping(f) {
+    var set = [5, 10, 15, 30];
+    var audio = f.getElementById('myAudio');
+    var button = f.getElementsByTagName('button'); // ERROR HERE WITH GETTING BUTTONS
+
+    for (var time = 0; time < button.length; time++) {
+        button[time].addEventListener('click', setCurTime(time), false);
+    }
+
+    function setCurTime(time) {
+        button[time].onclick = function() {
+            audio.currentTime = set[time];
+            audio.play();
+        }
+    }
+
+} (document));
+
+function RunningRecord() {
     return(
         <>
             <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/glacial-indifference" type="text/css"/>
@@ -31,7 +62,6 @@ export default function RunningRecord() {
                 <li><span class="low-error-legend"></span>Low Error Word </li>
                 <li><span class="unread-legend"></span> Not Read </li>
             </ul>
-
             {/* Running Record Table */}
             <table>
                 <tr>
@@ -43,7 +73,7 @@ export default function RunningRecord() {
                     <th> M-P </th>
                 </tr>
                 <tr>
-                    <td><button> 1 </button></td>
+                    <td><button id='phrase-btn'> 1 </button></td>
                     <td> <span className="correct-text"> Sammy </span> <span className='incorrect-text'> chases  </span> <span className="correct-text"> his own tail when he </span><span className='low-error-text'> is </span> <span className="correct-text">happy.</span></td>
                     <td> 1 </td>
                     <td> 0 </td>
@@ -51,7 +81,7 @@ export default function RunningRecord() {
                     <td> 1 </td>
                 </tr>
                 <tr>
-                    <td><button> 2 </button></td>
+                    <td><button id='phrase-btn'> 2 </button></td>
                     <td> <span className="correct-text">He also </span> <span className='low-error-text'> likes to </span> <span className="correct-text"> play </span><span className='flagged-text'>fetch </span>   <span className="correct-text"> and go to the park. </span> </td>
                     <td> 0 </td>
                     <td> 1 </td>
@@ -59,7 +89,7 @@ export default function RunningRecord() {
                     <td> 1 </td>
                 </tr>
                 <tr> 
-                    <td><button> 3 </button></td>
+                    <td><button id='phrase-btn'> 3 </button></td>
                     <td> <span className="correct-text"> It </span> <span className= 'unread-text'> was a  </span><span className="correct-text"> fun day! </span> </td>
                     <td> 0 </td>
                     <td> 0 </td>
@@ -67,7 +97,7 @@ export default function RunningRecord() {
                     <td> 0 </td>
                 </tr>
                 <tr>
-                    <td><button> 4 </button></td>
+                    <td><button id='phrase-btn'> 4 </button></td>
                     <td> This is a sentence phrase. </td>
                     <td> 0 </td>
                     <td> 1 </td>
@@ -89,3 +119,5 @@ export default function RunningRecord() {
         </>
     )
 }
+
+export default RunningRecord;
