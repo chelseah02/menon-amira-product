@@ -4,39 +4,6 @@ import {Link} from "react-router-dom";
 import Story from './Story.js';
 import ReactPlayer from "react-player";
 import Footer from './Footer';
-{/*var set = [5, 10, 15, 30]; // In seconds
-    var audio = f.getElementById('myAudio');
-    var button = f.getElementsById('phrase-btn').getElementsByTagName('button');
-    for (var time = 0; time < button.length; time++) {
-        button[time].addEventListener('click', setCurTime(time), false);
-    }
-
-    function setCurTime(time) {
-        button[time].onclick = function() {
-            audio.currentTime = set[time];
-            audio.play();
-        }
-    } */}
-
-(function AudioJumping(f) {
-    'use strict';
-
-    var set = [5, 10, 15, 30]; // In seconds
-    var audio = f.getElementById('myAudio');
-    var button = f.getElementById('rr-table').getElementsByTagName('button'); // ERROR HERE WITH GETTING BUTTONS
-
-    for (var time = 0; time < button.length; time++) {
-        button[time].addEventListener('click', setCurTime(time), false);
-    }
-
-    function setCurTime(time) {
-        button[time].onclick = function() {
-            audio.currentTime = set[time];
-            audio.play();
-        }
-    }
-
-} (document));
 
 function RunningRecord() {
     return(
