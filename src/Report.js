@@ -10,7 +10,7 @@ function Report() {
             <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/glacial-indifference" type="text/css"/>
             <div>
             <h1 className='report-student'> Dorothy Hammond's Assessment Report</h1>
-            <Link to='/details'><btn class="details"> Details  {">"} </btn></Link>
+            <Link to='/details'><btn className="details"> Details  {">"} </btn></Link>
             </div>
 
                 <ul class="legend report-legend">
