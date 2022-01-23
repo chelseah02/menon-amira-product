@@ -1,0 +1,19 @@
+.trend {
+    margin-left: 10%;
+    margin-top: 5%;
+}
+
+.story-title {
+    font-family: 'GlacialIndifferenceRegular';
+    font-weight: bold;
+    font-style: normal;
+    color: #FDFDFD;
+    background-color: #64D698;
+    border-radius: 15px;
+    font-size: 35px;
+    text-align: center;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+}

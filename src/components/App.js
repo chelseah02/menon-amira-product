@@ -16,7 +16,7 @@ function App() {
         <Route exact path="/" component={Story} />
         <Route exact path="/record" component={RunningRecord} />
         <Route exact path="/report" component={Report} />
-        <Route exact path="/details" />
+        <Route exact path="/details" component={Details}/>
         <Route exact path="/team" component={Team}/>
         <Footer />
       </header>
