@@ -1,5 +1,5 @@
 import React from 'react';
-import './RunningRecord.css';
+import './styles/RunningRecord.css';
 import {Link} from "react-router-dom";
 import Story from './Story.js';
 import ReactPlayer from "react-player";

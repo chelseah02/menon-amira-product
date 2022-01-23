@@ -1,6 +1,6 @@
 import React from 'react'
-import './App.css';
-import './Report.css';
+import './styles/App.css';
+import './styles/Report.css';
 import Footer from './Footer';
 import {Link} from 'react-router-dom';
 
@@ -10,7 +10,7 @@ function Report() {
             <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/glacial-indifference" type="text/css"/>
             <div>
             <h1 className='report-student'> Dorothy Hammond's Assessment Report</h1>
-            <Link to='/details'><btn class="details"> Details  {">"} </btn></Link>
+            <Link to='/details' class="details"> Details  {">"}</Link>
             </div>
 
                 <ul class="legend report-legend">

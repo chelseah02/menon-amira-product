@@ -1,7 +1,7 @@
 import React, {useState} from "react";
-import './App.css';
+import './styles/App.css';
 import RunningRecord from './RunningRecord';
-import './Story.css';
+import './styles/Story.css';
 import {Link} from 'react-router-dom';
 import ReactPlayer from "react-player";
 

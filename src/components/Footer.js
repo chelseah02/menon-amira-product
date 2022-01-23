@@ -3,8 +3,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import amiralogo from './images/amira-logo.PNG';
 import {Link} from 'react-router-dom';
-import './App.css';
-import './Footer.css';
+import './styles/App.css';
+import './styles/Footer.css';
         
 function Footer() {
     return (
@@ -25,8 +25,8 @@ function Footer() {
                     </tr>
                     <tr className="footer-row">
                         <td className="link footer-td"> <Link className="footer-link" to={{pathname: "https://www.menonlabs.com/"}} target="_blank">What is Menon Labs? </Link></td>
-                        <td className="tools footer-td"> ReactJS and Figma </td>
-                        <td className="link footer-td"> Notion Documentation </td>
+                        <td className="tools footer-td"> React.js and Figma </td>
+                        <td className="link footer-td"> <Link className="footer-link" to={{pathname: "https://mighty-perfume-4da.notion.site/Project-Description-9140e13a168a415ea0934ecf78bb91c7"}} target="_blank"> Project Description </Link></td>
                     </tr>
                     <tr className="footer-row">
                         <td className="link footer-td"> <Link className="footer-link" to={{pathname: "https://www.amiralearning.com/"}} target="_blank"> Amira Learning </Link> </td>

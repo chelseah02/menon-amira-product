@@ -1,10 +1,10 @@
-import logo from './logo.svg';
-import './App.css';
+import './styles/App.css';
 import NavBar from './NavBar';
 import RunningRecord from './RunningRecord';
-import Story from './Story';
+import Story from './Story.js';
 import Report from './Report';
 import Team from './Team';
+import Details from './Details';
 import Footer from './Footer';
 import {Route, Link} from 'react-router-dom';
 

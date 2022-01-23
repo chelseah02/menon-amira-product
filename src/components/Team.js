@@ -1,6 +1,6 @@
 import React from 'react'
-import './App.css';
-import './Team.css'
+import './styles/App.css';
+import './styles/Team.css';
 import Footer from './Footer';
 import {Link} from 'react-router-dom';
 import ethanPic from './images/ethan_profile.jpg';
