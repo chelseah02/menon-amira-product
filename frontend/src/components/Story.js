@@ -24,7 +24,36 @@ const Profile = () =>
 ;
 function Story(props) {
     const [showProfile, setProfileVisibility] = useState(false);
+    var story_text = props.location.state.data.story_text
+    var classified = props.location.state.data.classified
     console.log(props.location.state.data)
+    var items = []
+    var errors = 0
+
+    for(var i=0; i < story_text.length; i++) {
+        var words = story_text[i].split(" ")
+        for (var j=0; j < words.length; j++) {
+            if (j == 0) {
+                words[j] = words[j].charAt(0).toUpperCase() + words[j].slice(1);
+            } else if (j == words.length - 1) {
+                words[j] += '.'
+            }
+            if (classified.sent_index[errors] == i && classified.error_index[errors] == j) {
+                var type;
+                if (classified.error_type[errors] == "miscue - substitution") {
+                    type = "incorrect-text"
+                } else {
+                    type = "low-error-text"
+                }
+                items.push(<span className={type}>{words[j] + ' '}</span>)
+                errors++
+            } else {
+                items.push(words[j] + ' ')
+            }
+        }
+        while (classified.sent_index[errors] <= i) errors++
+    }
+    console.log(items)
     return(
     <div id="story">
         <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/glacial-indifference" type="text/css"/>
@@ -40,9 +69,7 @@ function Story(props) {
         </div>
         {showProfile ? <Profile /> : null}
         <p className='text'>
-            My dog <span className='low-error-text'>likes</span> to run fast. His name is Sammy and he is funny. Sammy <span className='incorrect-text'>chases</span> his own tail when he <span className='low-error-text'>is</span> happy. 
-            He also <span className='low-error-text'> likes to </span> play <span className='flagged-text'>fetch</span> and go to the park. One day we went to the park to play <span className='incorrect-text'>fetch</span>. When we got
-            there, we <span className='incorrect-text'>decided</span> to have a race <span className='incorrect-text'>instead</span>. Sammy <span className='incorrect-text'>obviously</span> won <span className='incorrect-text'>because</span> he is faster than I am. It <span className='unread-text'> was a </span>fun day!
+            {items}
         </p>
         <rect className='scroll-bar'> </rect>
         

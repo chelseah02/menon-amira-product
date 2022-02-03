@@ -23,8 +23,6 @@ class FrontPage extends Component {
         const data = new FormData();
         data.append('story_text', event.target.files[0]);
         data.append('transcript', event.target.files[1]);
-        data.append('name', 'some value user types');
-        data.append('description', 'some value user types');
         // '/files' is your node.js route that triggers our middleware
         axios.defaults.baseURL = 'http://localhost:8080';
         axios.post('/files', data, {"Access-Control-Allow-Origin": "*"}).then((response) => {
