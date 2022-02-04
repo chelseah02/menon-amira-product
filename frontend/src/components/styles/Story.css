@@ -9,6 +9,10 @@
 
 }
 
+input[type="file"] {
+    display: none;
+}
+
 .record-btn, .save-btn, .story-btn, .student-btn, .upload-btn {
     background-color: #ddd;
     margin-bottom: 5%;

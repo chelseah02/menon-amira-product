@@ -38,9 +38,13 @@ class FrontPage extends Component {
     render() {
         return(
             
-            <div>
+            <div className='upload-btn'>
+                <label className='upload-btn'>
+                    <input type="file" onChange={this.handleUpload} multiple="multiple" />
+                    Upload Story and Transcript
+                </label>
                 {this.renderRedirect()}
-                <input type="file" onChange={this.handleUpload} multiple="multiple" />
+                
             </div>
         )
         
