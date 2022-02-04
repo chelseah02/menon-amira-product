@@ -9,16 +9,16 @@ const Profile = () =>
     <rect className='student-profile'>
     <h2 className='profile-title'> Student Profile </h2>
     <h1 className="student-name"> Dorothy Hammond </h1>
-    <h2 className='accuracy-text'> Accuracy <span className='grade-text'>94%</span></h2>
+    <h2 className='accuracy-text'> Accuracy <span className='grade-text'>88%</span></h2>
 
     {/* Key/Legend */}
     <ul class="legend legend-story">
         <li className='legend-title'> Legend </li>
         <li class="legend-story-item incorrect-story-word"><span class="incorrect-legend incorrect-story"></span> Incorrect</li>
-        <li class="legend-story-item"><span class="correct-legend legend-story-item"></span> Correct </li>
-        <li class="legend-story-item"><span class="flagged-legend legend-story-item"></span> Flagged </li>
-        <li class="legend-story-item"><span class="low-error-legend legend-story-item"></span>Low Error Word </li>
-        <li class="legend-story-item"><span class="unread-legend legend-story-item"></span> Not Read </li>
+        <li class="legend-story-item"><span class="correct-legend"></span> Correct </li>
+        <li class="legend-story-item"><span class="flagged-legend"></span> Flagged </li>
+        <li class="legend-story-item"><span class="low-error-legend"></span>Low Error Word </li>
+        <li class="legend-story-item"><span class="unread-legend"></span> Not Read </li>
     </ul>
     </rect>
 ;

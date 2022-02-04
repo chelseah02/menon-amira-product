@@ -70,10 +70,10 @@ input[type="file"] {
 .text {
     color: #5DC458;
     text-align: left;
-    font-size: 35px;
-    margin-left: 21%;
+    font-size: 30px;
+    margin-left: 15%;
     margin-right: 5%;
-    width: 60%;
+    width: 70%;
     padding: 15px 20px; 
      
 }
@@ -178,14 +178,22 @@ input[type="file"] {
 .legend-title {
     color: white !important;
     text-align: center;
-    margin-right: 2%;
-    margin: 5%;
 }
+
+.hidden {
+    visibility: hidden;
+}
+
+.show {
+    visibility: visible;
+}
+
 .legend-story-item {
     color: white !important;
     font-weight: normal;
     font-size: 15px;
     margin-left: 0%;
+    margin-top: 20px;
     vertical-align: middle;
     display: table-cell;
 }
