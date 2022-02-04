@@ -27,23 +27,3 @@ function App() {
 }
 
 export default App;
-
-{/*
-          <Route exact path="/" component={NavBar} />
-        <Route exact path="/story" component={Story} />
-        <Route exact path="/record" component={RunningRecord} />
- */}
-        {
-          /* EXTRA CODE FOR REFERENCE <img src={logo} className="App-logo" alt="logo"/>
-        <p margin="0px">
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-          margin ="0"
-        >
-          Learn React
-        </a> */}
