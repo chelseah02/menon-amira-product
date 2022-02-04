@@ -26,7 +26,7 @@ function Footer() {
                     <tr className="footer-row">
                         <td className="link footer-td"> <Link className="footer-link" to={{pathname: "https://www.menonlabs.com/"}} target="_blank">What is Menon Labs? </Link></td>
                         <td className="tools footer-td"> React.js and Figma </td>
-                        <td className="link footer-td"> <Link className="footer-link" to={{pathname: "https://mighty-perfume-4da.notion.site/Project-Description-9140e13a168a415ea0934ecf78bb91c7"}} target="_blank"> Project Description </Link></td>
+                        <td className="link footer-td"> <Link className="footer-link" to={{pathname: "https://menonlabs.notion.site/Project-Deliverable-Documentation-208e7a5235ee405aa03d8f70f11a3d84"}} target="_blank"> Project Description </Link></td>
                     </tr>
                     <tr className="footer-row">
                         <td className="link footer-td"> <Link className="footer-link" to={{pathname: "https://www.amiralearning.com/"}} target="_blank"> Amira Learning </Link> </td>
