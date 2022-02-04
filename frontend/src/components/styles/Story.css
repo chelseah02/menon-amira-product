@@ -9,7 +9,7 @@
 
 }
 
-.record-btn, .save-btn, .story-btn, .student-btn {
+.record-btn, .save-btn, .story-btn, .student-btn, .upload-btn {
     background-color: #ddd;
     margin-bottom: 5%;
     border: none;
@@ -46,6 +46,10 @@
     margin-left: 40%;
 }
 
+.upload-btn {
+    background-color: #62E49D;
+    margin-bottom: 3%;
+}
 .story-btn {
     background-color: #62E49D;
     margin-left: 3%;
