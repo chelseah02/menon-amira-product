@@ -51,7 +51,6 @@ function Story(props) {
                 items.push(words[j] + ' ')
             }
         }
-        while (classified.sent_index[errors] <= i) errors++
     }
     console.log(items)
     return(
@@ -59,7 +58,7 @@ function Story(props) {
         <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/glacial-indifference" type="text/css"/>
         <div className='btn'>
             <Link className='story-btn' to='/'> Story </Link>
-            <Link className='record-btn' to='/record'> Record </Link>
+            <Link className='record-btn' to={{ pathname: '/record', state: {data: props.location.state.data}}}> Record </Link>
             <button className='student-btn'> Dorothy Hammond </button>
             <button className='save-btn'> Save </button>
         </div>

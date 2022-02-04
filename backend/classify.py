@@ -36,7 +36,7 @@ def damerau_levenshtein_distance(s1, s2):
 Check if the two words are similar at the 0.4 threshold
 """
 def is_similar(s1, s2):
-  if damerau_levenshtein_distance(s1,s2) > 0.4:
+  if damerau_levenshtein_distance(s1,s2) > 0.4 and len(s1) >= 5 and len(s2) >= 5:
     return True
   return False
 
@@ -251,26 +251,77 @@ def error(text, trans):
         return "correct"
     return error
 
+def get_story_idx(story, idx):
+  i = 0
+  count = 0
+  while i < idx:
+    if story[i] == '-':
+        count += 1
+    i += 1
+  return idx - count
+    
+
+def classify_new(story, trans):
+  errors = []
+  cur_s = story
+  cur_t = trans
+  start = 0
+  end = len(cur_s) - 1
+  
+  # ignore unrelated chatter in the beginning
+  while cur_s[start] == '-': start += 1
+      
+  # ignore unrelated chatter in the end
+  while cur_s[end] == '-': end -= 1
+  
+  prev_correct = end
+  
+  while end >= start:
+    if cur_s[end] == cur_t[end]:
+      prev_checked = end
+      prev_correct = end
+      error = None
+    elif cur_s[end] == '-':
+      if cur_t[end] in cur_s:
+        error = 'correct-repetition'
+        word = cur_t[end]
+        idx = cur_s.index(cur_t[end])
+      elif is_similar(cur_t[end], cur_t[prev_correct]) or cur_t[end] in cur_t[prev_correct]:
+        error = 'correct - self-correction'
+        word = cur_s[prev_correct]
+        idx = prev_correct
+      else:
+        # this is unrelated chatter but we will ignore it for now
+        error = None
+        word = cur_s[prev_checked]
+        idx = prev_checked
+    elif cur_t[end] == '-':
+      error = 'miscue - skip'
+      word = cur_s[end]
+      idx = end
+    else:
+      prev_checked = end
+      error = 'miscue - substitution'
+      word = cur_s[end]
+      idx = end
+    if error is not None:
+      errors.append([get_story_idx(story, idx), word, error])
+    
+    end -= 1
+  return errors[::-1]
+  
+
 
 def classify_sent(text, trans):
-  # convert string to list
-  ltext = text.split(" ")
-  ltrans = trans.split(" ")
+    # convert string to list
+    ltext = text.split(" ")
+    ltrans = trans.split(" ")
 
-  # align text and transcript
-  aligned_text, aligned_trans = needleman_wunsch(ltext, ltrans)
-
-  # find the index of errors
-  error_index = error(aligned_text, aligned_trans)
-
-  # if there is no error, return correct
-  if (error_index == 'correct'):
-    return error_index
-  else:
-    # find the words that have errors
-    error_words = get_error_word(aligned_text, aligned_trans, error_index)
-    # classify the errors
-    return classify(error_words, ltext, ltrans)
+    # align text and transcript
+    aligned_text, aligned_trans = needleman_wunsch(ltext, ltrans)
+    
+    # classify errors
+    return classify_new(aligned_text, aligned_trans)
 
 def frontend():
     #front end data
@@ -287,9 +338,6 @@ def frontend():
 
     for i in range(len(transcript)):
         transcript[i] = transcript[i].lower().translate(str.maketrans('', '', string.punctuation)).replace("\n","").replace("  ", "")
-
-    print(story_text)
-    print(transcript)
 
     data = {'story_text':story_text, 'transcript':transcript}
     fdf = pd.DataFrame(data)

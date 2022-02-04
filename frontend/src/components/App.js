@@ -16,7 +16,7 @@ function App() {
         <NavBar />
         <Route exact path="/" component={FrontPage} />
         <Route exact path="/story" component={Story} render={(props) => <Story {...props}/>}/>
-        <Route exact path="/record" component={RunningRecord} />
+        <Route exact path="/record" component={RunningRecord} render={(props) => <RunningRecord {...props}/>}/>
         <Route exact path="/report" component={Report} />
         <Route exact path="/details" component={Details}/>
         <Route exact path="/team" component={Team}/>

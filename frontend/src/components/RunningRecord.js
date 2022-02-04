@@ -4,14 +4,55 @@ import {Link} from "react-router-dom";
 import Story from './Story.js';
 import ReactPlayer from "react-player";
 import Footer from './Footer';
+import ReactHtmlParser from 'react-html-parser'
 
-function RunningRecord() {
+function RunningRecord(props) {
+    console.log(props.location.state.data)
+    var story_text = props.location.state.data.story_text
+    var classified = props.location.state.data.classified
+    var items = []
+    var errors = 0
+    var num_words = 0
+    var num_errors = 0
+    for(var i=0; i < story_text.length; i++) {
+        var words = story_text[i].split(" ")
+        var sentence = "";
+        var error = 0
+        var mp = 0
+        
+        for (var j=0; j < words.length; j++) {
+            num_words++
+            if (j == 0) {
+                words[j] = words[j].charAt(0).toUpperCase() + words[j].slice(1);
+            } else if (j == words.length - 1) {
+                words[j] += '.'
+            }
+            if (classified.sent_index[errors] == i && classified.error_index[errors] == j) {
+                var type;
+                if (classified.error_type[errors] == "miscue - substitution") {
+                    type = "incorrect-text"
+                    error++
+                    num_errors++
+                } else if (classified.error_type[errors] == "correct - self-correction") {
+                    type = "low-error-text"
+                    mp++
+                    num_errors++
+                }
+                sentence = sentence + "<span class='" + type + "'>" + words[j] + " " + "</span>"
+                errors++
+            } else {
+                sentence = sentence + "<span class='correct-text'>" + words[j] + " " + "</span>"
+            }
+        }
+        var curJSX = "<tr><td><button id='phrase-btn'>" + (i+1).toString() + "</button></td>" + sentence + "<td>" + (error + mp).toString() +  "</td><td>" + mp.toString() +  "</td><td> 0 </td><td>" + error.toString() + "</td></tr>"
+        items.push(ReactHtmlParser(curJSX))
+    }
     return(
         <>
             <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/glacial-indifference" type="text/css"/>
             {/* Record and Save Buttons */}
             <div className='button'>
-                <Link to="/" className='story-button record-pg-button'>Story</Link>
+                <Link to={{ pathname: '/story', state: {data: props.location.state.data}}} className='story-button record-pg-button'>Story</Link>
                 <button className='record-button'>Record</button>
                 <button className='save-button'>Save</button>
             </div>
@@ -19,7 +60,7 @@ function RunningRecord() {
             {/* Running Record Title */}
             <div className='record-title'>
                 <h1 className='scoring-student'> Scoring Dorothy Hammond's Assessment </h1>
-                <h1 className='grade'> 94%</h1>
+                <h1 className='grade'> {((1 - num_errors / num_words) * 100).toString().slice(0, 2)}%</h1>
                 <h1 className='accuracy'>  Accuracy </h1>
             </div>
 
@@ -35,44 +76,13 @@ function RunningRecord() {
             <table id='rr-table'>
                 <tr>
                     <th> Phrase </th>
-                    <th> </th>
+                    <th> Sentence </th>
                     <th> Error </th>
                     <th> S-C </th>
                     <th> Skip</th>
                     <th> M-P </th>
                 </tr>
-                <tr>
-                    <td><button id='phrase-btn'> 1 </button></td>
-                    <td> <span className="correct-text"> Sammy </span> <span className='incorrect-text'> chases  </span> <span className="correct-text"> his own tail when he </span><span className='low-error-text'> is </span> <span className="correct-text">happy.</span></td>
-                    <td> 1 </td>
-                    <td> 0 </td>
-                    <td> 0 </td>
-                    <td> 1 </td>
-                </tr>
-                <tr>
-                    <td><button id='phrase-btn'> 2 </button></td>
-                    <td> <span className="correct-text">He also </span> <span className='low-error-text'> likes to </span> <span className="correct-text"> play </span><span className='flagged-text'>fetch </span>   <span className="correct-text"> and go to the park. </span> </td>
-                    <td> 0 </td>
-                    <td> 1 </td>
-                    <td> 0 </td>
-                    <td> 1 </td>
-                </tr>
-                <tr> 
-                    <td><button id='phrase-btn'> 3 </button></td>
-                    <td> <span className="correct-text"> It </span> <span className= 'unread-text'> was a  </span><span className="correct-text"> fun day! </span> </td>
-                    <td> 0 </td>
-                    <td> 0 </td>
-                    <td> 1 </td>
-                    <td> 0 </td>
-                </tr>
-                <tr>
-                    <td><button id='phrase-btn'> 4 </button></td>
-                    <td> This is a sentence phrase. </td>
-                    <td> 0 </td>
-                    <td> 1 </td>
-                    <td> 0 </td>
-                    <td> 1</td>
-                </tr>
+                {items}
             </table>
 
             {/* Audio Bar  */}
